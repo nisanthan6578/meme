@@ -175,7 +175,7 @@ footer{text-align:center;background:#051329;color:white;padding:30px 15px;margin
 
   <!-- Left Side: Profile Photo -->
   <img class="profile"
-       src="IMG_20260924_071849.jpg"
+       src="IMG-20261017-WA0002.jpg"
        alt="Nishanthan Suseekaran profile photo"
        onerror="this.alt='Profile photo file not found'">
 
