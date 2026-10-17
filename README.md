@@ -10,7 +10,7 @@
 html{scroll-behavior:smooth}
 body{font-family:Arial,sans-serif;background:#051329;color:#ffffff;line-height:1.7}
 
-/* Header & Navigation */
+/* Header & Navigation (As shown in screenshot) */
 header{background:#051329;color:white;padding:20px 5%;text-align:center}
 .logo{font-size:22px;font-weight:bold;margin-bottom:12px;letter-spacing:0.5px}
 nav{display:flex;flex-wrap:wrap;gap:15px;justify-content:center;margin-top:5px}
@@ -22,23 +22,15 @@ nav a:hover{color:#8ddfff}
   position:relative;
   background:linear-gradient(180deg, #051329 0%, #0a2540 50%, #071b35 100%);
   color:white;
-  padding:40px 6%;
+  padding:35px 6%;
   display:flex;
   align-items:flex-start;
-  gap:35px;
+  gap:25px;
   flex-wrap:wrap;
   min-height:380px;
 }
 
-/* Left Side: Profile Photo with CV Button directly below it */
-.hero-left-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  flex-shrink: 0;
-}
-
+/* Left Side: Profile Photo with White Border */
 .profile{
   width: 140px;
   height: 140px;
@@ -47,33 +39,16 @@ nav a:hover{color:#8ddfff}
   border-radius:14px;
   border:4px solid white;
   background:#dceeff;
+  flex-shrink: 0;
 }
 
-.button{
-  display:inline-block;
-  background:#7dd3fc;
-  color:#051329;
-  text-decoration:none;
-  padding:9px 16px;
-  border-radius:8px;
-  font-weight:bold;
-  font-size: 14px;
-  box-shadow: 0 3px 5px rgba(0,0,0,0.2);
-  text-align: center;
-  width: 100%;
-}
-.button:hover {
-  background:#38bdf8;
-}
-
-/* Right Side Content Area shifted more to the right */
+/* Right Side Content Area matching screenshot layout */
 .hero-right-content {
   flex: 1;
-  min-width: 280px;
+  min-width: 260px;
   display: flex;
   flex-direction: column;
   gap: 8px;
-  padding-left: 15px;
 }
 
 .hero-right-content h2{
@@ -110,7 +85,7 @@ nav a:hover{color:#8ddfff}
   font-size: 14px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
   overflow-wrap: anywhere;
   color: #e2e8f0;
 }
@@ -121,6 +96,26 @@ nav a:hover{color:#8ddfff}
 }
 .contact-mini a:hover {
   text-decoration: underline;
+}
+
+/* Download CV Button placed below photo/content as in screenshot */
+.cv-container {
+  margin-top: 25px;
+  padding-left: 6%;
+}
+.button{
+  display:inline-block;
+  background:#7dd3fc;
+  color:#051329;
+  text-decoration:none;
+  padding:12px 24px;
+  border-radius:10px;
+  font-weight:bold;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+.button:hover {
+  background:#38bdf8;
 }
 
 /* Main Content & Sections */
@@ -137,18 +132,25 @@ footer{text-align:center;background:#051329;color:white;padding:30px 15px;margin
   header{padding:15px}
   nav{gap:10px;font-size:13px}
   .hero{
-    padding:25px 15px;
+    padding:20px 15px;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    text-align: left;
+  }
+  .profile{
+    width: 120px;
+    height: 120px;
+    margin-bottom: 5px;
   }
   .hero-right-content {
-    padding-left: 0;
     width: 100%;
-    align-items: center;
   }
   .name-line {
     max-width: 100%;
+  }
+  .cv-container {
+    padding-left: 0;
+    text-align: center;
   }
 }
 </style>
@@ -171,16 +173,13 @@ footer{text-align:center;background:#051329;color:white;padding:30px 15px;margin
 
 <div class="hero" id="home">
 
-  <!-- Left Side: Profile Photo with Download CV Button right below it -->
-  <div class="hero-left-column">
-    <img class="profile"
-         src="IMG_20260924_071849.jpg"
-         alt="Nishanthan Suseekaran profile photo"
-         onerror="this.alt='Profile photo file not found'">
-    <a class="button" href="CV_Nishan.pdf" download>Download My CV ↓</a>
-  </div>
+  <!-- Left Side: Profile Photo -->
+  <img class="profile"
+       src="IMG_20260924_071849.jpg"
+       alt="Nishanthan Suseekaran profile photo"
+       onerror="this.alt='Profile photo file not found'">
 
-  <!-- Right Side: Name, Line, Welcome, and Contact Details shifted right -->
+  <!-- Right Side: Name, Line, Welcome, Contact Details matching screenshot -->
   <div class="hero-right-content">
     <h2>Nishanthan Suseekaran</h2>
     <div class="name-line"></div>
@@ -194,6 +193,11 @@ footer{text-align:center;background:#051329;color:white;padding:30px 15px;margin
     </div>
   </div>
 
+</div>
+
+<!-- Download CV Button placed below as seen in screenshot -->
+<div class="cv-container">
+  <a class="button" href="CV_Nishan.pdf" download>Download My CV ↓</a>
 </div>
 
 <main>
